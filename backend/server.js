@@ -14,7 +14,12 @@ app.get('/api/health', (req, res) => {
 
 // Middleware
 const corsOptions = {
-  origin: process.env.FRONTEND || 'http://localhost:8080', // Your frontend URL
+  origin: [
+    process.env.FRONTEND_URL, 
+    'http://localhost:8080', // Local development
+    'https://coupon-management-black.vercel.app', // Your Vercel app
+    'https://coupon-management-black.vercel.app/' // With trailing slash
+  ],
   credentials: true,
   optionsSuccessStatus: 200
 };
