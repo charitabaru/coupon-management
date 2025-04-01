@@ -1,6 +1,6 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
-import Coupon from '../models/coupon.js';
+import Coupon from '../models/Coupon.js';
 import Claim from '../models/Claim.js';
 
 const router = express.Router();
